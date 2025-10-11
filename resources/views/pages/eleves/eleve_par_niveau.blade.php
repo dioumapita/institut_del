@@ -185,12 +185,13 @@
                             <div class="pull-left">
                                 <address>
                                     <h4 class="font-bold addr-font-h4">
-                                        <u class="souligner">METFP</u>
+                                        <u class="souligner">MEET-FPT</u>
                                         <br>
-                                        <u class="souligner">I.R.E: Labé</u>
-                                    </h4>
-                                    <h4 class="font-bold addr-font-h4">
-                                        <u class="souligner">INSTITUT DE FORMATION PROFESSIONNEL <br> ET TECHNIQUE DE DARA ETOILE LABE (DEL)</u>
+                                        <u class="souligner">DNEET-FPP</u>
+                                        <br>
+                                        <u class="souligner">IREET-FP</u>
+                                        <br>
+                                        <u class="souligner">INSTITUT DEL</u>
                                     </h4>
                                 </address>
                             </div>

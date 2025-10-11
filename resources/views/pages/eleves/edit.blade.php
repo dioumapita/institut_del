@@ -75,7 +75,7 @@
                                         </div>
                                     </div>
                                 <!-- End prénom de l'élève -->
-                                {{-- <!-- Start civilite -->
+                                <!-- Start civilite -->
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">@lang('create.Sexe')
                                             <span class="required"> * </span>
@@ -90,7 +90,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                <!-- End civilite --> --}}
+                                <!-- End civilite -->
                                 <!-- Start date de naissance de l'élève -->
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">@lang('create.Date_naiss')

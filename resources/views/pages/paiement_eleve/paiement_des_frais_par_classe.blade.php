@@ -183,7 +183,7 @@
                                                                                         class="form-control" name="montant" id="montant" value="{{ old('montant') }}" aria-describedby="helpId" placeholder="" required max="{{ ($inscription->niveau->frais_scolaires->where('annee_id',$annee_courante->id)->first()->scolarite + $inscription->niveau->frais_scolaires->where('annee_id',$annee_courante->id)->first()->frais_inscription) - $inscription->eleve->remisePaiementEleves->where('annee_id',$annee_courante->id)->sum('montant_reduit') - $inscription->eleve->paiementEleves->where('annee_id',$annee_courante->id)->sum('somme_payer') }}">
                                                                                     </div>
                                                                                 @endif
-                                                                                <div class="form-group">
+                                                                                {{-- <div class="form-group">
                                                                                     <label for="mois">Mois</label>
                                                                                     <select  name="mois[]" id="mois" class="form-control select2" multiple required>
                                                                                     <option value="null">Sélectionnez</option>
@@ -201,7 +201,7 @@
                                                                                         <option value="Novembre" >Novembre</option>
                                                                                         <option value="Décembre" >Décembre</option>
                                                                                     </select>
-                                                                                </div>
+                                                                                </div> --}}
                                                                                 <div class="form-group">
                                                                                     <label for="tranche">Selectionnez une tranche</label>
                                                                                     <select class="form-control" name="tranche" id="tranche" required>

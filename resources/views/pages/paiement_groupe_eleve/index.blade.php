@@ -81,7 +81,7 @@
                                                                         @if($eleve->paiementEleves->where('annee_id',$annee_courante->id)->where('status',0)->count() > 0)
 
                                                                         @else
-                                                                            <option value="{{ $eleve->id }}" >{{ $eleve->prenom.' '.$eleve->nom }}</option>
+                                                                            <option value="{{ $eleve->id }}" >{{ $eleve->prenom.' '.$eleve->nom.' telephone: '.$eleve->telephone }}</option>
                                                                         @endif
                                                                     @endif
                                                                 @endforeach

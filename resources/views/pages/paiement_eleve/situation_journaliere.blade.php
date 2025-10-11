@@ -72,6 +72,7 @@
                                 </div>
                             </div>
                         <!-- fin modal -->
+                        <input type="button" class="btn btn-primary" onclick="printDiv('imprime')" value="@lang('liste_eleve.Imprimer')" />
                     </div>
                 </div>
                 <div class="table-scrollable">
@@ -170,12 +171,13 @@
                         <div class="pull-left">
                             <address>
                                 <h4 class="font-bold addr-font-h4">
-                                    <u class="souligner">METFP</u>
+                                    <u class="souligner">MEET-FPT</u>
                                     <br>
-                                    <u class="souligner">I.R.E: Labé</u>
-                                </h4>
-                                <h4 class="font-bold addr-font-h4">
-                                    <u class="souligner">INSTITUT DE FORMATION PROFESSIONNEL <br> ET TECHNIQUE DE DARA ETOILE LABE (DEL)</u>
+                                    <u class="souligner">DNEET-FPP</u>
+                                    <br>
+                                    <u class="souligner">IREET-FP</u>
+                                    <br>
+                                    <u class="souligner">INSTITUT DEL</u>
                                 </h4>
                             </address>
                         </div>
@@ -209,7 +211,7 @@
                         <table id="bordure_table" class="table table-bordered">
                             {{-- <th class="text-center" id="bordure_table">@lang('liste_eleve.Image')</th> --}}
                             <th class="text-center" id="bordure_table">N°</th>
-                            <th class="text-center" id="bordure_table">Elève</th>
+                            <th class="text-center" id="bordure_table">Etudiant</th>
                             <th class="text-center" id="bordure_table">Classe</th>
                             <th class="text-center" id="bordure_table">Montant payer</th>
                             <tbody id="bordure_table">
@@ -217,14 +219,16 @@
                                     $p = 1;
                                 @endphp
                                 @foreach ($all_paiements as $paiement)
-                                <tr class="odd gradeX">
-                                    <td class="text-center" id="bordure_table">{{ $p++ }}</td>
-                                    <td class="text-center" id="bordure_table">{{ $paiement->eleve->prenom.' '.$paiement->eleve->nom }}</td>
-                                    <td class="text-center" id="bordure_table">{{ $paiement->eleve->inscrits->where('annee_id',$annee_courante->id)->first()->niveau->nom_niveau.' '.$paiement->eleve->inscrits->where('annee_id',$annee_courante->id)->first()->niveau->option }}</td>
-                                    <td class="text-center">
-                                         {{ number_format($paiement->somme_payer,0,',',' ').' GNF' }}
-                                    </td>
-                                </tr>
+                                    @if($paiement->eleve->inscrits->where('annee_id',$annee_courante->id)->first() != null)
+                                        <tr class="odd gradeX">
+                                            <td class="text-center" id="bordure_table">{{ $p++ }}</td>
+                                            <td class="text-center" id="bordure_table">{{ $paiement->eleve->prenom.' '.$paiement->eleve->nom }}</td>
+                                            <td class="text-center" id="bordure_table">{{ $paiement->eleve->inscrits->where('annee_id',$annee_courante->id)->first()->niveau->nom_niveau.' '.$paiement->eleve->inscrits->where('annee_id',$annee_courante->id)->first()->niveau->option }}</td>
+                                            <td class="text-center">
+                                                {{ number_format($paiement->somme_payer,0,',',' ').' GNF' }}
+                                            </td>
+                                        </tr>
+                                    @endif
                                 @endforeach
                             </tbody>
                         </table>
@@ -232,10 +236,10 @@
                     </div>
                     <div>
                         <div class="pull-left">
-                            <h4 class="font-blod addr-font-h4">Fondateur <br> Mr Bangoura Aboubacar</h4>
+                            <h4 class="font-blod addr-font-h4">Fondateur </h4>
                         </div>
                         <div class="pull-right">
-                            <h4>Comptable <br>Mr Keita Sekouba</h4>
+                            <h4>Comptable</h4>
                         </div>
                     </div>
                 </div>
